@@ -7,10 +7,6 @@
 
 The output of this function overlays the transformed points onto the images, allowing us to visually check if the transformation aligns well with the original points.
 
-- **Figure 2**: Verified homography on both images:
-
-![Homography Verification](images/figure2.jpg)
-
 #### 1.3 Warping Between Image Planes
 With the homography matrix in hand, the next step is to warp one image into the plane of the other. This is achieved using the `WarpImage(imgA, H)` function, which takes the homography matrix **H** and applies the transformation to warp **imgA**.
 
@@ -30,13 +26,6 @@ After warping the source image into the destination image's coordinate system, t
 
 The output should be a seamless mosaic where the two images appear as if they were captured from a single viewpoint.
 
-- **Figure 3**: Output mosaic created by warping the source image into the destination image:
-
-![Output Mosaic](images/figure3.jpg)
-
-- **Figure 4**: Another output mosaic created with different parameters:
-
-![Output Mosaic 2](images/figure4.jpg)
 
 #### 1.5 Debugging the System
 At this point, you should apply the image mosaicking system to the provided image pair and debug any issues related to the stitching, alignment, or blending. It's important to carefully check the image alignment after applying the homography transformation.
@@ -44,23 +33,18 @@ At this point, you should apply the image mosaicking system to the provided imag
 #### 1.6 Show Additional Example of a Mosaic
 To further test the robustness of your image stitching system, you can apply it to a new pair of images and observe the results.
 
-- **Figure 5**: Additional example of a mosaic:
-
-![Additional Mosaic 1](images/figure5.jpg)
-
 #### 1.7 Show Another Example of a Mosaic
 Continuing with testing, create another mosaic to see how well the algorithm performs on different sets of images.
 
 - **Figure 6**: Second additional example of a mosaic:
 
-![Additional Mosaic 2](images/figure6.jpg)
 
 #### 1.8 Warp One Image into a "Frame" Region in the Second Image
 In this section, we focus on warping one image into a specific "frame" region of the second image. This demonstrates the flexibility of the homography transformation and how it can be used to position one image inside a particular region of another.
 
 - **Figure 7**: Warped image inside the frame of the second image:
 
-![Warped Frame](images/figure7.jpg)
+
 
 ---
 
@@ -77,7 +61,6 @@ This automatic method is much more efficient than manually selecting corresponde
 
 - **Figure 8**: Example of automatic keypoint matching:
 
-![VLFeat Keypoints](images/figure8.jpg)
 
 #### 2.2 Implementing RANSAC for Robust Homography Estimation
 RANSAC (Random Sample Consensus) is used to estimate the homography matrix in the presence of noisy or outlier correspondences. It is a robust method that minimizes the effect of outliers by iteratively selecting random subsets of the correspondences and fitting a homography to those points.
