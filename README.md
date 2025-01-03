@@ -71,11 +71,11 @@ RANSAC (Random Sample Consensus) is used to estimate the homography matrix in th
 
 - **Figure 9**: Homography without RANSAC (Non-RANSAC):
 
-![Non-RANSAC Homography](images/figure9.jpg)
+![Non-RANSAC Homography](1.png)
 
 - **Figure 10**: Homography with RANSAC (Robust):
 
-![RANSAC Homography](images/figure10.jpg)
+![RANSAC Homography](2.png)
 
 ---
 
